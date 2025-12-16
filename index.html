@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Downloads</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+/* BACKGROUND */
+.bg-anim {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(120deg, #fff1f1, #f7f7ff);
+  overflow: hidden;
+}
+
+.bg-anim span {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(255,80,80,0.35), transparent 70%);
+  border-radius: 50%;
+  animation: moveBlob 18s linear infinite;
+}
+
+.bg-anim span:nth-child(1) { top: 10%; left: 5%; }
+.bg-anim span:nth-child(2) { top: 60%; left: 70%; animation-duration: 22s; }
+.bg-anim span:nth-child(3) { top: 35%; left: 40%; animation-duration: 26s; }
+
+@keyframes moveBlob {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(30px,-40px); }
+  100% { transform: translate(0,0); }
+}
+
+/* TOP NOTICE */
+.top-notice {
+  margin: 16px 12px;
+  padding: 14px 16px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #ff3c3c, #ff8a00);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(255, 60, 60, 0.4);
+}
+
+/* PAGE */
+.page-wrap {
+  max-width: 420px;
+  margin: 20px auto;
+}
+
+/* SIMPLE INFO TEXT */
+.simple-text {
+  margin: 14px 12px 6px;
+  text-align: center;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #555;
+}
+
+/* CARD */
+.min-download-card {
+  margin: 18px 12px;
+  padding: 22px 18px;
+  background: linear-gradient(180deg, #ffffff, #fff5f5);
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 28px rgba(0,0,0,.08);
+}
+
+.min-title {
+  font-size: 19px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 18px;
+}
+
+.min-image-link {
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  animation: floatSoft 6s ease-in-out infinite;
+}
+
+.min-download-image {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #eee;
+}
+
+.min-download-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.min-image-link::after {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 0, 0, 0.35);
+  animation: pulse 3.2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(.95); opacity: 1; }
+  70% { transform: scale(1.1); opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes floatSoft {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
+
+@media (min-width: 768px) {
+  .min-download-image { width: 220px; height: 220px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg-anim">
+  <span></span><span></span><span></span>
+</div>
+
+<div class="top-notice">
+👇 Click the image below to open the download folder
+</div>
+
+<div class="page-wrap">
+
+  <!-- SIMPLE TEXT -->
+  <div class="simple-text">
+    All posts Are available here  
+    
+  </div>
+
+  <!-- POSTS -->
+  <div class="min-download-card">
+    <div class="min-title">Download Available</div>
+    <a href="https://example.com/file1" class="min-image-link" target="_blank">
+      <div class="min-download-image">
+        <img src="images/image1.png" alt="Download 1">
+      </div>
+    </a>
+  </div>
+
+  <div class="min-download-card">
+    <div class="min-title">New File Uploaded</div>
+    <a href="https://example.com/file2" class="min-image-link" target="_blank">
+      <div class="min-download-image">
+        <img src="images/image2.png" alt="Download 2">
+      </div>
+    </a>
+  </div>
+
+  <div class="min-download-card">
+    <div class="min-title">Premium Content</div>
+    <a href="https://example.com/file3" class="min-image-link" target="_blank">
+      <div class="min-download-image">
+        <img src="images/image3.png" alt="Download 3">
+      </div>
+    </a>
+  </div>
+
+  <div class="min-download-card">
+    <div class="min-title">Latest Update</div>
+    <a href="https://example.com/file4" class="min-image-link" target="_blank">
+      <div class="min-download-image">
+        <img src="" alt="Download 4">
+      </div>
+    </a>
+  </div>
+
+  <div class="min-download-card">
+    <div class="min-title">Exclusive File</div>
+    <a href="https://example.com/file5" class="min-image-link" target="_blank">
+      <div class="min-download-image">
+        <img src="images/image5.png" alt="Download 5">
+      </div>
+    </a>
+  </div>
+
+  <div class="min-download-card">
+    <div class="min-title">Ultra Fast Download</div>
+    <a href="https://example.com/file6" class="min-image-link" target="_blank">
+      <div class="min-download-image">
+        <img src="images/image6.png" alt="Download 6">
+      </div>
+    </a>
+  </div>
+
+  <div class="min-download-card">
+    <div class="min-title">Special Release</div>
+    <a href="https://example.com/file7" class="min-image-link" target="_blank">
+      <div class="min-download-image">
+        <img src="images/image7.png" alt="Download 7">
+      </div>
+    </a>
+  </div>
+
+</div>
+
+</body>
+</html>
